@@ -64,9 +64,6 @@ int main(void)
         printf("OK\n");
     }
 
-
-    printf("----------------------------------------\n");
-
 }
 
 void getPeriodoPassoConstante(double* theta,double h){
