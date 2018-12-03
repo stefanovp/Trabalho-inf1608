@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <math.h>
-#include "pendulo.h"
 #include <sys/time.h>
+
+#include "pendulo.h"
+#include "plot.h"
 
 void getPeriodoPassoConstante(double* theta,double h);
 int main(void)
@@ -48,7 +50,22 @@ int main(void)
 	printf("----------------------------------------\n");
 
 	printf("Angulo inicial maximo para simplifiacao ter erro menor que 0.001\n");
-	printf("%.5lf\n", anguloMax(0.00001) );
+	printf("R: %.5lf\n", anguloMax(0.00001) );
+
+	printf("---------------PLOTS---------------\n");
+    //gera arquivo de dados para plot da solucao numerica
+    for(int i=0;i<7;i++){
+    	printf("Gerando dados para theta = %f\t", theta[i]);
+        geraData_SolucaoNumerica(theta[i], 0.00001);
+        printf("OK\n");
+
+        printf("Plotando gráfico %d\t", i);
+        plot_Gnuplot(theta[i]);
+        printf("OK\n");
+    }
+
+
+    printf("----------------------------------------\n");
 
 }
 

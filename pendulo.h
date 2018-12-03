@@ -2,5 +2,6 @@
 double pendulo (double t, double h, double* theta, double* w);
 double periodo (double theta_0,double h);
 double periodo_simplificado (void);
+double adaptPendulo (double t, double h, double* theta, double* w, double e);
 double adaptPeriodo (double theta_0,double e);
 double anguloMax(double e);
