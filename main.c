@@ -48,7 +48,7 @@ int main(void)
 	printf("----------------------------------------\n");
 
 	printf("Angulo inicial maximo para simplifiacao ter erro menor que 0.001\n");
-	printf("%.5lf\n", anguloMax(0.00001) );
+	printf("Maximo %.5lf\n", anguloMax(0.00001) );
 
 }
 
