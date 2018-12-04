@@ -49,7 +49,7 @@ double geraData_SolucaoNumerica (double theta_0,double e)
         w1 = w2;
         t1 = t2;
 
-        if(cont==0)
+       if(cont<2)
             fprintf(fdata, "%lf %lf \n", t2, theta_0);
 
         t2 = adaptPendulo (t1,0.01, &theta_0,&w2,e);
