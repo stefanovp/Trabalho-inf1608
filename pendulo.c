@@ -103,7 +103,6 @@ double anguloMax(double e){
 			a= med;
 		else
 			b=med;
-
 		printf("theta %.16lf\t", med);
 		printf("erro %.16lf\n", erro);
 	}
